@@ -1,0 +1,34 @@
+---
+Title: rpg
+---
+classDiagram
+    class Character{
+        - _id: int
+        - label: varchar[256]
+        - name: varchar[256]
+        - hp: decimal
+        - defense: int
+        - strengh: int
+        - agility: int
+        - intelligence: int
+        - crit_chance: decimal
+        - #id_weapon: int
+    }
+    class Weapon{
+        - _id: int
+        - name: varchar[256]
+        - speed: int
+        - strengh: int
+        - agility: int
+        - intelligence: int
+        - #id_attack1: int
+        - #id_attack2: int
+    }
+    class Attack{
+        - _id: int
+        - name: varchar[256]
+        - base_damage: int
+    }
+
+    Weapon "0,n"--"1,1" Character
+    Weapon "2,2"--"1,n" Attack

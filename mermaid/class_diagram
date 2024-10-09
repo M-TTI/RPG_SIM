@@ -1,5 +1,5 @@
 ---
-Title: rpg
+Title: class diagram rpg
 ---
   classDiagram
     class Character{

@@ -1,0 +1,59 @@
+---
+Title: rpg
+---
+  classDiagram
+    class Character{
+    <<abstract>>
+    - id: int
+  - name: str
+  - hp: float
+  - defense: int
+  - strengh: int
+  - agility: int
+  - intelligence: int
+  //- dodge: float
+  //- precision: float
+    - crit_chance: float
+    - current_hp: float
+    - current_defense: int
+  //- position: Position
+    + Getters()
+    + Setters()
+  + Attack(attack: Attack, target: Character)
+}
+    class Warrior{
+  - weapon: Weapon
+}
+    class Ranger{
+  - weapon: Weapon
+}
+    class Mage{
+  - weapon: Weapon
+}
+    class Weapon{
+  - id: int
+  - name: str
+  - speed: int
+  - strengh: int
+  - agility: int
+  - intelligence: int
+  - action1: Action
+  - action2: Action
+    + Getters()
+    + Setters()
+}
+    class Action{
+  - id: int
+  - name: str
+}
+    class Attack{
+  - base_damage: int
+}
+    Character <|-- Warrior
+    Character <|-- Ranger
+    Character <|-- Mage
+    Action <|-- Attack
+    Warrior -- Weapon
+    Ranger -- Weapon
+    Mage -- Weapon
+    Weapon -- Action

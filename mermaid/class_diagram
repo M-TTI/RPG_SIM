@@ -42,7 +42,7 @@ Title: class diagram rpg
     + Getters()
     + Setters()
 }
-    class Action{
+    class Skill{
   - id: int
   - name: str
 }

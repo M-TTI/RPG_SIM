@@ -52,8 +52,8 @@ Title: class diagram rpg
     Character <|-- Warrior
     Character <|-- Ranger
     Character <|-- Mage
-    Action <|-- Attack
+    Skill <|-- Attack
     Warrior -- Weapon
     Ranger -- Weapon
     Mage -- Weapon
-    Weapon -- Action
+    Weapon -- Skill

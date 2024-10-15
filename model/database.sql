@@ -20,7 +20,7 @@ CREATE TABLE Weapon (
 );
 
 -- Création de la table Character
-CREATE TABLE Character (
+CREATE TABLE Characters (
     id INT PRIMARY KEY AUTO_INCREMENT,
     label VARCHAR(256) NOT NULL,
     name VARCHAR(256) NOT NULL,

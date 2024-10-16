@@ -8,6 +8,28 @@ public class Weapon {
     private Skill skill1;
     private Skill skill2;
 
+    public Weapon()
+    {
+        this.id = 0;
+        this.name = "test_weapon";
+        this.speed = 1;
+        this.strength = 5;
+        this.agility = 5;
+        this.intelligence = 5;
+        this.skill1 = new Attack();
+        this.skill2 = new Attack();
+    }
+    public Weapon(int id, String name, int speed, int strength, int agility, int intelligence, Skill skill1, Skill skill2) {
+        this.id = id;
+        this.name = name;
+        this.speed = speed;
+        this.strength = strength;
+        this.agility = agility;
+        this.intelligence = intelligence;
+        this.skill1 = skill1;
+        this.skill2 = skill2;
+    }
+
     public int getId() {
         return id;
     }

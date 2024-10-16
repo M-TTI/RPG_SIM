@@ -1,15 +1,27 @@
 package model;
 
+import utilities.EnvReader;
+
+import java.io.IOException;
 import java.sql.*;
 
 public class DAO {
-    protected final String DB_URL = "jdbc:mysql://localhost:3306/RPG_SIM";
-    protected final String DB_USER = "bthouverez";
-    protected final String DB_PASS = "321654";
+    protected final String DB_URL;
+    protected final String DB_USER;
+    protected final String DB_PASS;
     protected Connection connection;
     protected ResultSet results;
 
-    public DAO() {
+    public DAO() throws IOException {
+        EnvReader env = new EnvReader();
+        env.load();
+        this.DB_URL = env.get("DB_URL");
+        this.DB_USER = env.get("DB_USER");
+        this.DB_PASS = env.get("DB_PASS");
+        System.out.println(this.DB_URL);
+        System.out.println(this.DB_USER);
+        System.out.println(this.DB_PASS);
+
         this.connection = null;
         this.results = null;
 

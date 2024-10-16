@@ -1,5 +1,6 @@
 package model;
 
+import java.io.IOException;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 
 public class CharacterDAO extends DAO {
 
-    public CharacterDAO() {
+    public CharacterDAO() throws IOException {
         super();
     }
 

@@ -30,11 +30,15 @@ public class Weapon {
     public int getSpeed() {
         return speed;
     }
-    public Skill getSkill1() {
+    public Skill getSkill(int nb) {
+        if(nb == 1)
+        {
+            return skill1;
+        } else if (nb == 2)
+        {
+            return skill2;
+        }
         return skill1;
-    }
-    public Skill getSkill2() {
-        return skill2;
     }
 
     public void setId(int id) {
@@ -46,10 +50,12 @@ public class Weapon {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
-    public void setSkill1(Skill skill1) {
-        this.skill1 = skill1;
+    public void setSkill(Skill skill, int nb) {
+        if (nb == 1) {
+            this.skill1 = skill;
+        } else if (nb == 2) {
+            this.skill2 = skill;
+        }
     }
-    public void setSkill2(Skill skill2) {
-        this.skill2 = skill2;
-    }
+
 }

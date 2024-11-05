@@ -37,12 +37,13 @@ Title: class diagram rpg
   - strengh: int
   - agility: int
   - intelligence: int
-  - action1: Action
-  - action2: Action
+  - skill1: Skill
+  - skill2: Skill
     + Getters()
     + Setters()
 }
-    class Action{
+    class Skill{
+    <<abstract>>
   - id: int
   - name: str
 }
@@ -52,8 +53,8 @@ Title: class diagram rpg
     Character <|-- Warrior
     Character <|-- Ranger
     Character <|-- Mage
-    Action <|-- Attack
+    Skill <|-- Attack
     Warrior -- Weapon
     Ranger -- Weapon
     Mage -- Weapon
-    Weapon -- Action
+    Weapon -- Skill

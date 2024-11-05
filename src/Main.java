@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello world!");
         CharacterDAO dao = new CharacterDAO();
-        ArrayList<String> stats = dao.getByLabel("Warrior");
+        ArrayList<String> stats = dao.getByName("Warrior");
         for(String e : stats) {
             System.out.println(e);
         }

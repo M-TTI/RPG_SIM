@@ -13,13 +13,13 @@ public class Test1 {
 
         if (char1.getWeapon().getSpeed() > char2.getWeapon().getSpeed()) {
             System.out.println(char1.getName() + " commence.");
-            double dmg = char1.cast_skill(char1.getWeapon().getSkill1());
+            double dmg = char1.cast_skill(char1.getWeapon().getSkill(1));
             System.out.println(char2.getName() + " va recevoir " + dmg + " pt de degat et a " + char2.getCurrent_hp() + " pv");
             char2.receive_skill(dmg);
             System.out.println(char2.getName() + " a " + char2.getCurrent_hp() + " pv");
         } else {
             System.out.println(char2.getName() + " commence.");
-            double dmg = char2.cast_skill(char2.getWeapon().getSkill1());
+            double dmg = char2.cast_skill(char2.getWeapon().getSkill(1));
             System.out.println(char1.getName() + " va recevoir " + dmg + " pt de degat et a " + char1.getCurrent_hp() + " pv");
             char1.receive_skill(dmg);
             System.out.println(char1.getName() + " a " + char1.getCurrent_hp() + " pv");

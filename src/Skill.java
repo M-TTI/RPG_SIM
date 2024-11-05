@@ -9,6 +9,7 @@ public class Skill
         this.name = "test_skill";
         this.base_damage = 20.0;
     }
+
     public Skill(int id, String name, double base_damage) {
         this.id = id;
         this.name = name;

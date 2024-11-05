@@ -74,8 +74,17 @@ public class Character
     public double cast_skill(Skill casted_skill)
     {
         double dmg = casted_skill.getBase_damage();
+
+        boolean crited = false;
         int crit = (int) (Math.random() * 100) + 1;
-        if(crit <= this.crit_chance){ dmg *= 2; }
+        if(crit <= this.crit_chance)
+        {
+            dmg *= 2;
+            crited = true;
+        }
+
+        System.out.println(this.getName()+" va infliger "+ dmg+" pt de dégat");
+        if(crited){System.out.println("Coup critique !");}
 
         return dmg;
     }
@@ -85,6 +94,7 @@ public class Character
         dmg -= this.getDefense();
         this.current_hp -= dmg;
 
+        System.out.println(this.getName()+" a désormais "+this.current_hp+" pv");
         return this.current_hp;
     }
 

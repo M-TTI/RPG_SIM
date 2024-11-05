@@ -1,9 +1,10 @@
+
 -- Insertion de personnages
 INSERT INTO Characters (name, hp_max, hp, def, crit) VALUES
-                                                        ('Hero', 100, 100, 10, 5),
-                                                        ('Warrior', 120, 120, 15, 3),
-                                                        ('Mage', 80, 80, 5, 10),
-                                                        ('Rogue', 90, 90, 8, 15);
+                                                         ('Hero', 100, 100, 10, 5),
+                                                         ('Warrior', 120, 120, 15, 3),
+                                                         ('Mage', 80, 80, 5, 10),
+                                                         ('Rogue', 90, 90, 8, 15);
 
 -- Insertion d'armes
 INSERT INTO Weapon (name, speed) VALUES

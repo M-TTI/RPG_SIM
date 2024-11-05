@@ -1,26 +1,45 @@
 public class Ranger extends Character {
-    protected String weapon ;
+
+    protected Weapon weapon;
 
     public Ranger() {
         super();
-        this.weapon = "undefined";
+        this.weapon = new Weapon();
     }
 
-    public Ranger(String name,float hp, int defense, int strengh, int agility, int intelligence, float crit_chance,float current_hp, int current_defense, String w) {
-        super(name,hp,defense,strengh, agility, intelligence, crit_chance,current_hp,current_defense);
-        this.weapon = w ;
+    public Ranger(int id,
+                  String name,
+                  float hp,
+                  int defense,
+                  int strengh,
+                  int agility,
+                  int intelligence,
+                  float crit_chance,
+                  float current_hp,
+                  int current_defense,
+                  Weapon weapon) {
+        super(id,
+                name,
+                hp,
+                defense,
+                strengh,
+                agility,
+                intelligence,
+                crit_chance
+        );
+        this.weapon = weapon;
     }
 
-    public String getWeapon() {
+    public Weapon getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(String weapon) {
+    public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 
     @Override
-    public String toString() {
-        return STR."Ranger{weapon='\{weapon}\{'\''}\{'}'}";
+    public void attack(Attack attack, Character target) {
+        //TODO implement attack()
     }
 }

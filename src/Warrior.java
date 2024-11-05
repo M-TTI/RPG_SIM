@@ -29,8 +29,6 @@ public class Warrior extends Character
         this.weapon = weapon;
     }
 
-    @Override
-    public void attack(Attack attack, Character target) {
-        //TODO implement attack()
-    }
+
+    public void attack(Attack attack, Character target) {}
 }

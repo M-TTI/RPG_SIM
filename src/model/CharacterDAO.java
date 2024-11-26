@@ -17,6 +17,7 @@ public class CharacterDAO extends DAO {
      * @param label type de personnage dont on veut les caractéristiques
      * @return un tableau de String contenant toutes les caractéristiques
      */
+
     public ArrayList<String> getByLabel(String label) {
         ArrayList<String> resp = new ArrayList<>();
         //creation et execution de la requete

@@ -1,33 +1,30 @@
-DROP TABLE IF EXISTS WeaponSkill;
-DROP TABLE IF EXISTS Skill;
-DROP TABLE IF EXISTS Weapon;
-DROP TABLE IF EXISTS Character;
+DROP TABLE IF EXISTS Weapons;
+DROP TABLE IF EXISTS Characters;
+DROP TABLE IF EXISTS Skills;
 
-CREATE TABLE Characters (
-                           id INT AUTO_INCREMENT PRIMARY KEY,
-                           name VARCHAR(100),
-                           hp_max INT,
-                           hp INT,
-                           def INT,
-                           crit INT
-);
-
-CREATE TABLE Weapon (
+CREATE TABLE Skills (
                         id INT AUTO_INCREMENT PRIMARY KEY,
                         name VARCHAR(100),
-                        speed INT
+                        damage INT
 );
 
-CREATE TABLE Skill (
-                       id INT AUTO_INCREMENT PRIMARY KEY,
-                       name VARCHAR(100),
-                       damage INT
+CREATE TABLE Weapons (
+                         id INT AUTO_INCREMENT PRIMARY KEY,
+                         name VARCHAR(100),
+                         speed INT,
+                         weapon_skill1 INT,
+                         weapon_skill2 INT,
+                         FOREIGN KEY (weapon_skill1) REFERENCES Skills(id),
+                         FOREIGN KEY (weapon_skill2) REFERENCES Skills(id)
 );
 
-CREATE TABLE WeaponSkill (
-                             weapon_id INT,
-                             skill_id INT,
-                             PRIMARY KEY (weapon_id, skill_id),
-                             FOREIGN KEY (weapon_id) REFERENCES Weapon(id),
-                             FOREIGN KEY (skill_id) REFERENCES Skill(id)
+CREATE TABLE Characters (
+                            id INT AUTO_INCREMENT PRIMARY KEY,
+                            name VARCHAR(100),
+                            hp FLOAT,
+                            defense INT,
+                            crit_chance FLOAT,
+                            current_hp FLOAT,
+                            weapon INT,
+                            FOREIGN KEY (weapon) REFERENCES Weapons(id)
 );

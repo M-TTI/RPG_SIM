@@ -11,7 +11,7 @@ public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         CharacterDAO dao = new CharacterDAO();
 
-        System.out.println(dao.getByLabel("Warrior"));
+        System.out.println(dao.getByName("Warrior"));
 
         /*
         Character char1 = new Character();

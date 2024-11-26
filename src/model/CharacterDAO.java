@@ -13,15 +13,15 @@ public class CharacterDAO extends DAO {
     }
 
     /**
-     * Récupère les données d'un type de personnage selon son label
-     * @param label type de personnage dont on veut les caractéristiques
+     * Récupère les données d'un type de personnage selon son name
+     * @param name type de personnage dont on veut les caractéristiques
      * @return un tableau de String contenant toutes les caractéristiques
      */
-    public ArrayList<String> getByLabel(String label) {
+    public ArrayList<String> getByName(String name) {
         ArrayList<String> resp = new ArrayList<>();
         //creation et execution de la requete
         System.out.println("Creation et execution de la requête");
-        String query = "SELECT * FROM Characters WHERE label = '" + label + "'";
+        String query = "SELECT * FROM Characters WHERE name = '" + name + "'";
 
         try {
             Statement stmt = this.connection.createStatement();

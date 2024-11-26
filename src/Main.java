@@ -9,11 +9,16 @@ public class Main {
   
 public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
+        CharacterDAO dao = new CharacterDAO();
 
+        System.out.println(dao.getByName("Warrior"));
+
+        /*
         Character char1 = new Character();
         Character char2 = new Character();
 
         ArrayList<Character> char_turn = new ArrayList<>();
+
         if(char1.getWeapon().getSpeed() > char2.getWeapon().getSpeed())
         {
             char_turn.add(char1);
@@ -44,7 +49,7 @@ public static void main(String[] args) throws IOException {
     
         System.out.println("Hello world!");
         CharacterDAO dao = new CharacterDAO();
-        ArrayList<String> stats = dao.getByLabel("Warrior");
+        ArrayList<String> stats = dao.getByName("Warrior");
         for(String e : stats) {
             System.out.println(e);
         }

@@ -18,9 +18,6 @@ public class DAO {
         this.DB_URL = env.get("DB_URL");
         this.DB_USER = env.get("DB_USER");
         this.DB_PASS = env.get("DB_PASS");
-        System.out.println(this.DB_URL);
-        System.out.println(this.DB_USER);
-        System.out.println(this.DB_PASS);
 
         this.connection = null;
         this.results = null;

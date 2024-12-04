@@ -33,7 +33,7 @@ public static void main(String[] args) throws IOException {
         int i = 0;
         while(loop)
         {
-            if(char_turn.get(0).getCurrent_hp() < 0){
+            if(char_turn.get(0).getCurrent_hp() <= 0){
                 System.out.println("Le combat est terminé. "+char_turn.get(0).getName()+"a été tué.");
                 loop = false;
 
